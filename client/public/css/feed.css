@@ -14,6 +14,17 @@ header {
 	color: white;
 }
 
+
+#img{
+	position : relative;
+	float: center;
+	margin-top:3px;
+	height:80px;
+	bottom:5px;
+	right:50px;
+
+}
+
 main {
 	display: grid;
 	padding-top: 60px;
