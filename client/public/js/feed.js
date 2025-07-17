@@ -4,6 +4,7 @@ function gotolocation(path) {
   function checkKeyPress(e) {
     if (e.keyCode == 32) {
         e.preventDefault();
+        alert("Error has been found")
       goToLocation('http://my.marist.edu');
     }
   }

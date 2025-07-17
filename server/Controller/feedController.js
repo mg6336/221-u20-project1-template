@@ -22,3 +22,37 @@ exports.saveUser = function(req, res) {
     allFeedItems.push(user);
     res.send(JSON.stringify(allFeedItems));
 }
+
+exports.deleteUser = function(req, res) {
+    let id = req.params.id;
+    console.log("The id is: "+ id);
+    allFeedItems = allFeedItems.splice(id, 1)
+    console.log("3: "+ allFeedItems);
+    res.send(allFeedItems);
+}
+
+exports.updateUser = function(req, res) {
+    let id = req.params.id;
+    let user = req.body
+
+    let userToEdit = allFeedItems[id];
+    console.log(userToEdit);
+
+    if (user.title) {
+        userToEdit.title = user.title;
+    }
+
+    if (user.body) {
+        userToEdit.body = user.body;
+    }
+
+    if (user.linkURL) {
+        userToEdit.linkURL = user.linkURL;
+    }
+
+    if (user.imageURL) {
+        userToEdit.imageURL = user.imageURL;
+    }
+
+    res.send(allFeedItems);
+}

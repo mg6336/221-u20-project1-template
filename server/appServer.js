@@ -11,7 +11,9 @@ app.route('/api/allFeedItems')
     .get(feedController.getAllUsers)
     .post(feedController.saveUser)
 app.route('/api/allFeedItems/:id')
-    .get(feedController.getUser);
+    .get(feedController.getUser)
+    .delete(feedController.deleteUser)
+    .patch(feedController.updateUser);
     app.get('/feed', function(req, res) {
         res.sendFile('feed.html', {root: './client/views'})
     })
