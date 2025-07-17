@@ -29,7 +29,6 @@ window.addEventListener("load" , function() {
   let article3 = {title : "Bird Bird Bird" , body: "All about birds" , linkURL : "https://en.wikipedia.org/wiki/Bird" , imageURL : "images/hancock.jpeg"};
   let articles = [article1 , article2 , article3];
   for(i = 0; i < articles.length; i++){
-    console.log(articles[i]);
     content.innerHTML += "<h3>" + articles[i].title + "</h3>";
     content.innerHTML += "<h5>" + articles[i].body + "</h5>";
     content.innerHTML += "<h5>" + articles[i].linkURL + "</h5>";
